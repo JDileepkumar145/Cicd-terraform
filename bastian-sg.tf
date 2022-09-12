@@ -21,7 +21,7 @@ resource "aws_security_group" "bastian" {
 }
 
 resource "aws_instance" "bastian" {
-  ami                    = "ami-00785f4835c6acf64"
+  ami                    = "ami-0b89f7b3f054b957e"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.publics[0].id
   vpc_security_group_ids = [aws_security_group.bastian.id]

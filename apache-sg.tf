@@ -26,7 +26,7 @@ resource "aws_security_group" "apache" {
 
 
 resource "aws_instance" "apache" {
-  ami                    = "ami-00785f4835c6acf64"
+  ami                    = "ami-0b89f7b3f054b957e"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.privates[0].id
   vpc_security_group_ids = [aws_security_group.apache.id]
