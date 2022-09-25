@@ -39,7 +39,7 @@ resource "aws_instance" "apache" {
 resource "aws_instance" "grafana" {
   ami                    = "ami-0b89f7b3f054b957e"
   instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.privates[0].id
+  subnet_id              = aws_subnet.privates[1].id
   vpc_security_group_ids = [aws_security_group.apache.id]
   tags = {
     Name = "stage-grafana"
